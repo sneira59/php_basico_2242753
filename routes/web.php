@@ -31,7 +31,7 @@ Route::get("variables" , function(){
 route::get('arreglos',function(){
     //definir un arreglo en php
     //Tamaño: numero de elementos del arreglos es 3
-    $estudiantes = ["AN"=> "Ana" , 
+    $estudiantes = ["AN"=> "Ana" ,
                     "MA" =>"Maria" ,
                     "JOR" => "Jorge" ];
     print_r($estudiantes);
@@ -64,3 +64,7 @@ Route :: get('paises', function(){
             //mostrar la vista de paises
     return view('paises')->with("naciones", $paises);
 });
+
+Route:: get('mostrar_formulario','MetabuscadorController@mostrar_formulario');
+
+Route:: post('buscar_termino',"MetabuscadorController@buscar_termino");
